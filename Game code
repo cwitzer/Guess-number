@@ -1,0 +1,24 @@
+import random
+import sys
+
+
+print("""
+Bot:
+I am thinking of a number\n""")
+def action():
+    while True:
+        try:
+            user = int(input("Pick a number between 1 and 5: "))
+        except ValueError:
+            print("Variable x is not found ")
+            continue
+        
+        guessing = random.choice(range(1,6))
+
+        if user == guessing:
+            print(f"YAY, my number was {guessing}")
+        else:
+            print(f"WRONG, my number was {guessing} ")
+
+action()
+        
