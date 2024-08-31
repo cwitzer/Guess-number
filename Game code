@@ -1,14 +1,19 @@
 import random
-import sys
+import time 
 
-
-print("""
+message = ("""
 Bot:
-I am thinking of a number\n""")
+I am thinking of a number between 1 and 5\nWhat is it?....\n""")
+for a in message:
+    print(a,end="",flush=True)
+    time.sleep(0.050)
+time.sleep(1)
+
+
 def action():
     while True:
         try:
-            user = int(input("Pick a number between 1 and 5: "))
+            user = int(input("\nPick a number: "))
         except ValueError:
             print("Variable x is not found ")
             continue
